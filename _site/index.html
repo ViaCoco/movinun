@@ -34,6 +34,12 @@
     display: inline-block;
     clear:left; 
     font-size:14px;
+    position: relative;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
  }
 
 #mc_embed_signup form {
@@ -51,6 +57,10 @@
     width: 50%;
     min-width: 130px;
     color: #999;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 
 #mc_embed_signup input.btn {
@@ -63,16 +73,28 @@
     -webkit-appearance: none;
 }
 
-#mc_embed_signup input {
-    border: 1px solid #999;
-    -webkit-appearance: none;
-}
-
 #mc_embed_signup label {
     display: block;
     font-size: 12px;
     padding-bottom: 2px;
     font-weight: 300;
+}
+
+#mc_embed_signup .clear {
+    clear: none;
+    display: inline;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+button {
+    display: inline-block;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -101,8 +123,7 @@
     <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3c71e18b2eeb28beac9f6ed18_5a7c2bbb43" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Get notified" name="subscribe" id="mc-embedded-subscribe" class="btn btn-color btn-primary"></div>
-    </div>
+    <div type="submit" value="Get notified" name="subscribe" id="mc-embedded-subscribe" class="btn btn-color btn-primary">Get notified</div>
 </form>
 </div>
 
